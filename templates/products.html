@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Products List</title>
+        <style>
+            *{
+                margin:0;
+                top:0;
+            }
+            body{
+                background-color:rgb(170, 170, 170);
+            }
+            #container{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px 30px;
+            }
+            #product-card{
+                margin: 5px;
+                padding: 2px;
+                width: 150px;
+                max-width: 150px;
+                min-height: 225px;
+                height: auto;
+                background-color: rgb(255, 255, 255);
+                border-radius: 10px;
+            }
+            #product-card img{
+                width: 120px;
+                height:auto;
+                margin:2px 0px;
+            }
+        </style>
+    </head>    
+    <body>
+        <center><h1>Products List</h1></center>
+        <div id="container">
+            {% for product in product_data %}
+            <div id="product-card">
+                <center><img src="http://localhost:8069/web/image?model=product.template&field=image_128&id={{product[0]}}&unique=01172022145803"></center>
+                <center><b><span>{{ product[1] }}</span></b></center>
+                <center><span>Rs.{{ product[2] }}</span></center>
+                <center><a href='/products/{{ product[0] }}'><button>Details</button></a></b></center>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

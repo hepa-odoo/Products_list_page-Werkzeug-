@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Products List</title>
+        <style>
+            *{
+                margin:0;
+                top:0;
+            }
+            #container{
+                margin: 5px auto;
+            }
+            #product-card{
+                margin: 5px auto;
+                padding: 20px;
+                width: max-content;
+                height: auto;
+                font-size: 18px;
+                background-color: rgb(228, 255, 255);
+            }
+            #product-card img{
+                width: 120px;
+                height:auto;
+                margin:2px 0px;
+            }
+            
+        </style>
+    </head>    
+    <body>
+        <div id="container">
+            <center><h1>Product Details</h1></center>
+            <div id="product-card">
+                <center><img src="http://localhost:8069/web/image?model=product.template&field=image_128&id=15&unique=01172022145803"></center>
+                <center><b><span>Name - {{ product[2] }}</span></b></center>
+                <center><span>Product code - {{ product[2] }}</span></center>
+                <center><span>Price - {{ product[10] }}</span></center>
+                <center><span>Product code - {{ product[20] }}</span></center>
+            </div>
+            <center><a href='/products'><button style="margin:10px">Back to Products</button></a></b></center>
+        </div>
+    </body>
+</html>
